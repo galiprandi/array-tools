@@ -1,0 +1,44 @@
+# Windsurf Rules for Array-Tools
+# Last update: 03/15/2025
+
+# General assistant behavior
+behavior:
+  language: "same as question"  # Preferred language for responses
+  verbosity: "very concise"  # Options: concise, normal, detailed
+  codeStyle: "modern standardJS"  # Preferred code style
+
+# Coding preferences
+coding:
+  indentation: 2  # Indentation spaces
+  maxLineLength: 80
+  preferArrowFunctions: true
+  preferConst: true
+  preferTemplateLiterals: true
+  semicolons: false  # Use semicolons at the end of lines
+
+# Documentation rules
+documentation:
+  requireJSDoc: true
+  generateReadme: true
+  includeExamples: true
+
+# Suggestion behavior
+suggestions:
+  autoCompleteCalls: true
+  showTypeInformation: true
+  suggestImports: true
+  suggestRefactors: true
+
+# Tool preferences
+tools:
+  preferPnpm: true  # Prefer npm over yarn/pnpm
+  testFramework: "vitest"
+  linter: "eslint"
+  formatter: "standard"
+  MDFormatter: "dprint"
+
+# Configuration specifically for array-tools
+arrayTools:
+  preferFunctionalStyle: true
+  documentationLevel: "detailed"
+  includeBenchmarks: true
