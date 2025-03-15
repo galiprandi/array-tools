@@ -1,0 +1,48 @@
+{
+  "name": "@galiprandi/array-tools",
+  "version": "1.0.0",
+  "description": "Utility functions for SQL-like array joins",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "publish": "echo '📦 Publishing package...' && npm publish",
+    "build": "echo '🏗️ Building package...' && tsc",
+    "prebuild": "npm run format:md && npm run code && npm test",
+    "test": "echo '🧪 Running Tests...' && vitest --run && echo '✅ All tests passed!'",
+    "code": "echo '🎨 Running Code Formatter...' && npx standard --fix . && echo '✅ Formatting complete!'",
+    "format:md": "npx dprint fmt *.md",
+    "prepare": "npm run build",
+    "release": "npm run format:md && node release.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "prompts": "^2.4.2",
+    "typescript": "~5.7.2",
+    "vitest": "^3.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galiprandi/array-tools.git"
+  },
+  "keywords": [
+    "array",
+    "join",
+    "typescript",
+    "utility"
+  ],
+  "author": "Germán Aliprandi",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
